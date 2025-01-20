@@ -12,6 +12,7 @@ import Spinner from "./Spinner";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useCities } from "../contexts/CitiesContext";
+import { useNavigate } from "react-router-dom";
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -26,6 +27,7 @@ const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 function Form() {
   const [lat, lng] = useUrlPosition();
   const { createCity, isLoading } = useCities();
+  const navigate = useNavigate();
 
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
   const [cityName, setCityName] = useState("");
@@ -81,7 +83,8 @@ function Form() {
       position: { lat, lng },
     };
     console.log("newCity", newCity);
-    createCity(newCity);
+    await createCity(newCity);
+    navigate("/app/cities");
   }
 
   if (isLoadingGeocoding) return <Spinner />;
@@ -126,7 +129,7 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
-        <Button>Add</Button>
+        <Button type="primary">Add</Button>
         <BackButton />
       </div>
     </form>

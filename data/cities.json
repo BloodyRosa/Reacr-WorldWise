@@ -37,72 +37,6 @@
       "id": "98443197"
     },
     {
-      "id": "5658",
-      "cityName": "Kollafjorður",
-      "country": "Iceland",
-      "date": "2025-01-17T03:36:36.840Z",
-      "notes": "",
-      "position": {
-        "lat": "64.17926149261923",
-        "lng": "-21.950683593750004"
-      }
-    },
-    {
-      "id": "1b5f",
-      "cityName": "Akureyri",
-      "country": "Iceland",
-      "date": "2025-01-17T04:17:53.114Z",
-      "notes": "",
-      "position": {
-        "lat": 65.66280244678343,
-        "lng": -18.06245962153252
-      }
-    },
-    {
-      "id": "8293",
-      "cityName": "Kyoto",
-      "country": "Japan",
-      "date": "2025-01-17T04:21:53.799Z",
-      "notes": "",
-      "position": {
-        "lat": 35.016859247458456,
-        "lng": 135.71960449218753
-      }
-    },
-    {
-      "id": "1116",
-      "cityName": "Nanning",
-      "country": "China",
-      "date": "2025-01-17T04:27:41.795Z",
-      "notes": "",
-      "position": {
-        "lat": 23.18622374947342,
-        "lng": 108.25338676003997
-      }
-    },
-    {
-      "id": "212f",
-      "cityName": "Paris",
-      "country": "France",
-      "date": "2025-01-17T04:29:26.754Z",
-      "notes": "",
-      "position": {
-        "lat": 48.823805828611235,
-        "lng": 2.4169921875000004
-      }
-    },
-    {
-      "id": "43db",
-      "cityName": "Paris",
-      "country": "France",
-      "date": "2025-01-17T04:29:26.754Z",
-      "notes": "",
-      "position": {
-        "lat": 48.823805828611235,
-        "lng": 2.4169921875000004
-      }
-    },
-    {
       "id": "88d7",
       "cityName": "Bierge",
       "country": "Spain",
@@ -124,6 +58,42 @@
       "position": {
         "lat": -37.84136099805104,
         "lng": 144.83052333765656
+      }
+    },
+    {
+      "id": "de1c",
+      "cityName": "Kyoto",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2025-01-18T04:16:54.727Z",
+      "notes": "nice",
+      "position": {
+        "lat": 35.003003395276714,
+        "lng": 135.74626072986692
+      }
+    },
+    {
+      "id": "462c",
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-01-19T04:06:43.350Z",
+      "notes": "nice",
+      "position": {
+        "lat": 48.87316320810626,
+        "lng": 2.39501953125
+      }
+    },
+    {
+      "id": "504c",
+      "cityName": "Eze",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-01-19T04:25:12.692Z",
+      "notes": "",
+      "position": {
+        "lat": 43.71950494269109,
+        "lng": 7.35462038744875
       }
     }
   ]
