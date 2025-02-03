@@ -1,4 +1,4 @@
-import { useContext, useReducer, useState } from "react";
+import { useContext, useReducer, useCallback } from "react";
 import { useEffect } from "react";
 import { createContext } from "react";
 
@@ -74,22 +74,25 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCity(id) {
-    if (Number(id) === currentCity.id) return;
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (Number(id) === currentCity.id) return;
 
-    dispatch({ type: "loading" });
+      dispatch({ type: "loading" });
 
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      dispatch({ type: "currentCity/loaded", payload: data });
-    } catch {
-      dispatch({
-        type: "rejected",
-        payload: "There was an error loading cities...",
-      });
-    }
-  }
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        dispatch({ type: "currentCity/loaded", payload: data });
+      } catch {
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading cities...",
+        });
+      }
+    },
+    [currentCity.id]
+  );
 
   async function createCity(newCity) {
     // const isDuplicate = cities.some((city) => city.name === newCity.name);
